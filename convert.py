@@ -11,7 +11,7 @@ class Convert():
         
     def openPDF(self,pdflocale, pages=0):
         try:
-            pgs = convert_from_path('copel.pdf', 500)
+            pgs = convert_from_path(pdflocale, 500)
             if pages == 0:
                 self.image = pgs[0]
         except Exception as e:
@@ -67,3 +67,24 @@ class Convert():
         except Exception as e:
             print(e)
             return self.text
+    
+    def getLayout(self,layout):
+        try:
+            values = self.getList()
+            resp = {}
+            for k in layout:
+                # resp[k]
+                v = values
+                for i in layout[k]['pos']:
+                    v = v[i]
+                if 'join' in layout[k]:
+                    ini = layout[k]['join'][0]
+                    fim = layout[k]['join'][1]
+                    if fim == "F":
+                        fim = len(v)
+                    v = " ".join(v[ini:fim])
+                resp[k] = v
+            return resp
+        except  Exception as e:
+            print(e)
+            return None
