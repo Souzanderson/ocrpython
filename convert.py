@@ -25,6 +25,16 @@ class Convert():
             print(e)
         return self
     
+    def openFile(self,locale):
+        try:
+            if '.pdf' in locale:
+                self.openPDF(locale)
+            else:
+                self.openImage(locale)
+        except Exception as e:
+            print(e)
+        return self
+    
     def convert(self):
         try:
             img = self.image.convert('RGB')
@@ -68,6 +78,13 @@ class Convert():
             print(e)
             return self.text
     
+    def detect(self,value):
+        try:
+            return (value in self.text)
+        except Exception as e:
+            print(e)
+            return False
+    
     def getLayout(self,layout):
         try:
             values = self.getList()
@@ -76,7 +93,10 @@ class Convert():
                 # resp[k]
                 v = values
                 for i in layout[k]['pos']:
-                    v = v[i]
+                    if i == 'F':
+                        v= v[-1]
+                    else:
+                        v = v[i]
                 if 'join' in layout[k]:
                     ini = layout[k]['join'][0]
                     fim = layout[k]['join'][1]

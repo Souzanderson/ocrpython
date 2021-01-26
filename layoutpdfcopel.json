@@ -1,0 +1,59 @@
+{
+    "Unidade Consumidora": {
+        "pos": [
+            6,
+            1
+        ]
+    },
+    "Data de Referência": {
+        "pos": [
+            6,
+            0
+        ]
+    },
+    "Valor": {
+        "pos": [
+            8,
+            2
+        ]
+    },
+    "Responsável": {
+        "pos": [
+            10
+        ],
+        "join": [
+            0,
+            "F"
+        ]
+    },
+    "Endereço": {
+        "pos": [
+            11
+        ],
+        "join": [
+            0,
+            "F"
+        ]
+    },
+    "Localidade": {
+        "pos": [
+            12
+        ],
+        "join": [
+            0,
+            -3
+        ]
+    },
+    "CEP": {
+        "pos": [
+            12,
+            "F"
+        ]
+    },
+    "CPF/CNPJ": {
+        "pos": [
+            14,
+            1
+        ]
+    }
+}

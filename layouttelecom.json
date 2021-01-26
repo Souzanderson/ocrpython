@@ -1,58 +1,52 @@
 {
-    "Unidade Consumidora": {
+    "Número de Identificação": {
         "pos": [
-            6,
-            1
+            5,
+            -1
         ]
     },
     "Data de Referência": {
+        "pos": [
+            5
+        ],
+        "join":[
+            -4,
+            -1
+        ]
+    },
+    "Valor": {
+        "pos": [
+            10,
+            -1
+        ]
+    },
+    "Responsável": {
+        "pos": [
+            3
+        ],
+        "join": [
+            0,
+            -6
+        ]
+    },
+    "Endereço": {
+        "pos": [
+            4
+        ],
+        "join": [
+            0,
+            "F"
+        ]
+    },
+    "CEP": {
         "pos": [
             6,
             0
         ]
     },
-    "Valor": {
+    "CPF/CNPJ": {
         "pos": [
-            8,
-            2
-        ]
-    },
-    "Responsável": {
-        "pos": [
-            10
-        ],
-        "join": [
-            0,
-            "F"
-        ]
-    },
-    "Endereço": {
-        "pos": [
-            11
-        ],
-        "join": [
-            0,
-            "F"
-        ]
-    },
-    "Localidade": {
-        "pos": [
-            12
-        ],
-        "join": [
-            0,
-            5
-        ]
-    },
-    "CEP": {
-        "pos": [
-            12,
-            7
-        ]
-    },
-    "CPF": {
-        "pos": [
-            13,
+            7,
             1
         ]
     }
